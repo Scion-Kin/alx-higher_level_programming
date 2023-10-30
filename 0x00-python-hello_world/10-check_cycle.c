@@ -12,14 +12,14 @@ int check_cycle(listint_t *list)
 	int a, b;
 
 	if (!list)
-		return(0);
+		return (0);
 
 	current = malloc(sizeof(listint_t));
 	if (current == NULL)
 		exit(98);
 
 	trav = malloc(sizeof(listint_t));
-	if  (trav == NULL)
+	if (trav == NULL)
 		exit(98);
 
 	current = list;
@@ -32,7 +32,7 @@ int check_cycle(listint_t *list)
 		current = current->next;
 		trav = current->next;
 		if (current->n == a && trav->n == b)
-			return(1);
+			return (1);
 	}
 	return (0);
 }
