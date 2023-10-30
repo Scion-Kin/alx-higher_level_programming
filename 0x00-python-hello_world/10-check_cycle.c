@@ -11,8 +11,17 @@ int check_cycle(listint_t *list)
 	listint_t *current, *trav;
 	int a, b;
 
+	if (!list)
+		return(0);
+
 	current = malloc(sizeof(listint_t));
+	if (current == NULL)
+		exit(98);
+
 	trav = malloc(sizeof(listint_t));
+	if  (trav == NULL)
+		exit(98);
+
 	current = list;
 	a = current->n;
 	trav = current->next;
