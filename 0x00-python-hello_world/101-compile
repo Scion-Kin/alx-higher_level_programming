@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+import subprocess
+import os
+
+# Get the Python script file name from the environment variable
+py_file = os.environ["PYFILE"]
+
+# Create the output filename
+compiled_file = py_file + "c"
+
+# Compile the Python script file
+subprocess.run(["python3", py_file], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
