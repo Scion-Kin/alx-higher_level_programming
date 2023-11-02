@@ -2,9 +2,10 @@
 from variable_load_5 import a
 
 
-def main():
+def find_var():
     print(a)
 
 
 if __name__ == "__main__":
-    main()
+    find_var()
+
