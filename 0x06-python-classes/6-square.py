@@ -24,9 +24,6 @@ class Square:
 
         here.__size = value
 
-    def area(here):
-        return here.__size * here.__size
-
     @property
     def position(here):
         return here.__position
@@ -40,6 +37,9 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
 
         here.__position = value
+
+    def area(here):
+        return here.__size * here.__size
 
     def my_print(here):
         if here.__size == 0:
