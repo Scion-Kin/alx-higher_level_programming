@@ -24,9 +24,6 @@ class Square:
 
         here.__size = value
 
-    def area(here):
-        return here.__size * here.__size
-
     @property
     def position(here):
         return here.__position
@@ -38,15 +35,21 @@ class Square:
 
         here.__position = value
 
-    def my_print(self):
+    def area(here):
+        return here.__size * here.__size
+
+    def my_print(here):
         """Print the square with the # character."""
-        if self.__size == 0:
+        if here.__size == 0:
             print("")
             return
 
-        for i in range(0, self.__size):
-            for j in range(0, self.__position[0]):
+        for i in range(0, here.__position[1]):
+            print("")
+
+        for i in range(0, here.__size):
+            for j in range(0, here.__position[0]):
                 print(" ", end="")
-            for k in range(0, self.__size):
+            for k in range(0, here.__size):
                 print("#", end="")
             print("")
