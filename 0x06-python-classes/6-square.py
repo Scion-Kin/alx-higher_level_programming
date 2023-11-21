@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''Defining a class'''
 
+
 class Square:
     '''If anything apart from int is passed, I raise an error'''
 
