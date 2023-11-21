@@ -1,2 +1,1 @@
 Let's get to see what classes can do, shall we?
-Also, from this repository, to future ones, another README doc of html filetype, will be included for copyright display purposes. Repos will have two READMEs because ALX requires a README.md file type, and can't be omitted. 
