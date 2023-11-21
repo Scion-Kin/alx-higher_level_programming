@@ -3,7 +3,7 @@
 
 
 class Square:
-    '''Defining a class that has a size attribute'''
+    '''Defining a class square that has a size attribute'''
 
     def __init__(here, size):
         here.__size = size
