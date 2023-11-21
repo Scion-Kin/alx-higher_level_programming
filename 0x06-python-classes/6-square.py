@@ -49,4 +49,4 @@ class Square:
         for i in range(here.__size):
             print(" "*here.__position[0], end="")
             print("#"*here.__size, end="")
-            print()
+            print("")
