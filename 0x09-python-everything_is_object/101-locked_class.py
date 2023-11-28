@@ -3,6 +3,7 @@
 
 
 class LockedClass:
-    '''defines a locked class to be used only is instance is name ***first_name***'''
+    '''defines a locked class to be used only is instance
+    is name ***first_name***'''
 
     __slots__ = 'first_name'
