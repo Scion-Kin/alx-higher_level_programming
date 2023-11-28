@@ -5,15 +5,19 @@
 class Rectangle:
     """Read the code"""
     def __init__(self, width=0, height=0):
+        """dodumentation pending"""
+
         self.__width = width
         self.__height = height
 
     @property
     def width(self):
+        """dodumentation pending"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """dodumentation pending"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
 
@@ -24,10 +28,12 @@ class Rectangle:
 
     @property
     def height(self):
+        """dodumentation pending"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """dodumentation pending"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
 
