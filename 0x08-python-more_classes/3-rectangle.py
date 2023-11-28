@@ -4,6 +4,7 @@
 
 class Rectangle:
     """Read the code"""
+
     def __init__(self, width=0, height=0):
 
         self.width = width
@@ -54,8 +55,4 @@ class Rectangle:
 
     def __str__(self):
 
-        for i in range(self.__height):
-            print("#" * self.__width, end="")
-            print()
-
-        return ""
+        return (("#") * self.__width + '\n') * self.__height
