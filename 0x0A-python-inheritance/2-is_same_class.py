@@ -8,5 +8,8 @@ def is_same_class(obj, a_class):
     if isinstance(obj, a_class):
         return True
 
+    elif obj.__dict__ != a_class.__dict__:
+        return False
+
     else:
         return False
