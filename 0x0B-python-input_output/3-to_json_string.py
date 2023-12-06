@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''This is a script generated documentation'''
+'''This is a module containing a function that deals with JSON'''
 
 
 def to_json_string(my_obj):
