@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''This is a script generated documentation'''
+'''This is a module containing a writing function'''
 
 
 def write_file(filename="", text=""):
