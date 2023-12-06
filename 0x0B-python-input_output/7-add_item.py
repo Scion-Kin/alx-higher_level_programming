@@ -14,6 +14,12 @@ if __name__ == "__main__":
     li = []
     word = ""
 
+    try:
+        temp = opener('add_item.json')
+
+    except FileNotFoundError:
+        li = []
+
     for i in range(1, argc):
         word += sys.argv[i] + " "
 
