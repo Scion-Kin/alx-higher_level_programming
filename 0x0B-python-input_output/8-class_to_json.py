@@ -1,2 +1,11 @@
 #!/usr/bin/python3
-'''This is a script generated documentation'''
+'''This modules contains a function for handling JSON data'''
+
+
+def class_to_json(obj):
+    '''Returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean)
+    for JSON serialization of an object'''
+
+    import json
+
+    return json.dumps(obj.__dict__)
