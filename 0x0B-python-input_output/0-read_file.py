@@ -1,12 +1,9 @@
 #!/usr/bin/python
-'''This is a script generated documentation'''
+'''A module containingf a function for reading files'''
 
 
 def read_file(filename=""):
-
-    import os
+    '''Prints the content of a passed file'''
 
     with open(filename, mode="r", encoding="UTF-8") as text:
-        for i in text:
-            print(i, end="")
-        print()
+        print(text.read(), end="")
