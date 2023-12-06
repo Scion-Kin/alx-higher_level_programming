@@ -6,5 +6,4 @@ def read_file(filename=""):
     """Prints the content of a passed file"""
 
     with open(filename, mode="r", encoding="utf-8") as text:
-        for i in text:
-            print(i, end="")
+        print(text.read(), end="")
