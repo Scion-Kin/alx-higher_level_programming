@@ -10,19 +10,12 @@ if __name__ == "__main__":
     writer = __import__('5-save_to_json_file').save_to_json_file
     opener = __import__('6-load_from_json_file').load_from_json_file
 
-    argc = len(sys.argv)
-    li = []
-    word = ""
-
     try:
-        temp = opener('add_item.json')
+        li = opener('add_item.json')
 
     except FileNotFoundError:
         li = []
 
-    for i in range(1, argc):
-        word += sys.argv[i] + " "
-
-    li += word.split()
+    li += sys.argv[1:]
 
     writer(li, 'add_item.json')
