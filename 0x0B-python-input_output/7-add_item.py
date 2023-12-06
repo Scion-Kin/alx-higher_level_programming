@@ -18,6 +18,5 @@ if __name__ == "__main__":
         word += sys.argv[i] + " "
 
     li += word.split()
-    print(word)
 
     writer(li, 'add_item.json')
