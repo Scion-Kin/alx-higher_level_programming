@@ -1,8 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """A module containing a function for reading files"""
 
 
 def read_file(filename=""):
-    """Print the contents of a UTF8 text file to stdout."""
-    with open(filename, encoding="utf-8") as f:
-        print(f.read(), end="")
+    """Prints the content of a passed file"""
+
+    with open(filename, encoding="UTF-8") as text:
+        for i in text:
+            print(i, end="")
