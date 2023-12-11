@@ -7,20 +7,7 @@ class Rectangle(Base):
     """Represent a rectangle."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Initialize a new Rectangle.
-
-        Args:
-            width (int): The width of the new Rectangle.
-            height (int): The height of the new Rectangle.
-            x (int): The x coordinate of the new Rectangle.
-            y (int): The y coordinate of the new Rectangle.
-            id (int): The identity of the new Rectangle.
-        Raises:
-            TypeError: If either of width or height is not an int.
-            ValueError: If either of width or height <= 0.
-            TypeError: If either of x or y is not an int.
-            ValueError: If either of x or y < 0.
-        """
+        '''Defines instance attributes'''
         self.width = width
         self.height = height
         self.x = x
@@ -29,7 +16,6 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Set/get the width of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -42,7 +28,6 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """Set/get the height of the Rectangle."""
         return self.__height
 
     @height.setter
@@ -55,7 +40,6 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """Set/get the x coordinate of the Rectangle."""
         return self.__x
 
     @x.setter
@@ -68,7 +52,6 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """Set/get the y coordinate of the Rectangle."""
         return self.__y
 
     @y.setter
@@ -78,3 +61,54 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        return self.width * self.height
+
+    def display(self):
+        """Prints the Rectangle using the `#` character."""
+        if self.width == 0 or self.height == 0:
+            print()
+            return
+
+        print(""*self.y)
+        for h in range(self.height):
+            print(" "*self.x, end="")
+            print("#"*self.width, end="")
+            print()
+
+    def update(self, *args, **kwargs):
+        if args:
+            if len(args) >= 1:
+                self.id = args[0] if args[0] is not None else self.id
+            if len(args) >= 2:
+                self.width = args[1] if args[1] is not None else self.width
+            if len(args) >= 3:
+                self.height = args[2] if args[2] is not None else self.width
+            if len(args) >= 4:
+                self.x = args[3] if args[3] is not None else self.x
+            if len(args) >= 5:
+                self.y = args[4] if args[4] is not None else self.y
+
+        elif kwargs and len(kwargs) != 0:
+            if "id" in kwargs:
+                self.id = kwargs["id"] if kwargs["id"] is not None else self.id
+            if "width" in kwargs:
+                self.width = (kwargs["width"] if kwargs["width"]
+                              is not None else self.width)
+            if "height" in kwargs:
+                self.height = (kwargs["height"] if kwargs["height"]
+                               is not None else self.height)
+            if "x" in kwargs:
+                self.x = kwargs["x"] if kwargs["x"] is not None else self.x
+            if "y" in kwargs:
+                self.y = kwargs["y"] if kwargs["y"] is not None else self.y
+
+    def to_dictionary(self):
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }
