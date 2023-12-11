@@ -26,7 +26,7 @@ class Square(Rectangle):
         return ("[Square] ({}) {}/{} - {}".format
                 (self.id, self.x, self.y, self.width))
 
-    '''def update(self, *args, **kwargs):
+    def update(self, *args, **kwargs):
         if args:
             if len(args) >= 1:
                 self.id = args[0] if args[0] is not None else self.id
@@ -51,4 +51,4 @@ class Square(Rectangle):
                 self.y = kwargs["y"] if kwargs["y"] is not None else self.y
 
     def to_dictionary(self):
-        return self.__dict__'''
+        return self.__dict__
