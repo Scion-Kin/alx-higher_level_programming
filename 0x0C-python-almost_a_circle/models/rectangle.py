@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-'''This is a script generated documentation'''
+'''This is a module defining a class'''
 from models.base import Base
 
 
 class Rectangle(Base):
-    '''Pending documentation'''
+    '''This class defines a base for all subclasses hereafter.'''
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        '''Documentation pending'''
+        '''Defines instance attributes.'''
 
         self.width = width
         self.height = height
