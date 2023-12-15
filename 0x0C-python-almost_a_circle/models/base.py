@@ -20,6 +20,8 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        '''This static method converts and returns a string
+        into json format'''
 
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
@@ -27,6 +29,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        '''Saves objects to a file in json format'''
         with open((cls.__name__ + ".json"), "w", encoding="UTF-8") as file:
             if list_objs is None:
                 file.write("[]")
@@ -37,12 +40,14 @@ class Base:
                 file.write(Base.to_json_string(data))
 
     def from_json_string(json_string):
+        '''converts json strings to a "normal" python string'''
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
+        '''Creates class instances from dictionary arguments'''
         if dictionary and len(dictionary) != 0:
             if cls.__name__ == "Rectangle":
                 new = cls(1, 1)
@@ -53,6 +58,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        '''loads from a json file and creates class instances'''
         try:
             with open((cls.__name__ + ".json"), "r") as file:
                 list_dicts = Base.from_json_string(file.read())

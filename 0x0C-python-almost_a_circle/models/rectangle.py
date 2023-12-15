@@ -16,10 +16,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        '''This is the getter of the private width attribute'''
         return self.__width
 
     @width.setter
     def width(self, value):
+        '''This is the setter of the private width attribute'''
         if type(value) != int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -28,10 +30,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        '''This is the getter of the private height attribute'''
         return self.__height
 
     @height.setter
     def height(self, value):
+        '''This is the setter of the private height attribute'''
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -40,10 +44,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        '''This is the getter of the private x attribute'''
         return self.__x
 
     @x.setter
     def x(self, value):
+        '''This is the setter of the private x attribute'''
         if type(value) != int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -52,10 +58,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        '''This is the getter of the private y attribute'''
         return self.__y
 
     @y.setter
     def y(self, value):
+        '''This is the setter of the private y attribute'''
         if type(value) != int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -63,10 +71,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        '''Returns the area of the rectangle'''
         return self.width * self.height
 
     def display(self):
-        """Prints the Rectangle using the `#` character."""
+        '''Prints the Rectangle using the `#` character.'''
         if self.width == 0 or self.height == 0:
             print()
             return
@@ -78,6 +87,7 @@ class Rectangle(Base):
             print()
 
     def update(self, *args, **kwargs):
+        '''Updates the instance attributes with provided arguments'''
         if args:
             if len(args) >= 1:
                 self.id = args[0] if args[0] is not None else self.id
@@ -105,6 +115,7 @@ class Rectangle(Base):
                 self.y = kwargs["y"] if kwargs["y"] is not None else self.y
 
     def to_dictionary(self):
+        '''Returns the dictionary representation of the class instance'''
         return {
             "id": self.id,
             "width": self.width,
