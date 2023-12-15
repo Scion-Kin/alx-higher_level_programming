@@ -86,6 +86,11 @@ class Rectangle(Base):
             print("#"*self.width, end="")
             print()
 
+    def __str__(self):
+        '''This function returns the string representation of the instance'''
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format
+                (self.id, self.x, self.y, self.width, self.height))
+
     def update(self, *args, **kwargs):
         '''Updates the instance attributes with provided arguments'''
         if args:
