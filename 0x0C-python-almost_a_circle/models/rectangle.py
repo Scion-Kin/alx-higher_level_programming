@@ -80,7 +80,7 @@ class Rectangle(Base):
             print()
             return
 
-        print(""*self.y)
+        [print("") for i in range(self.y)]
         for h in range(self.height):
             print(" "*self.x, end="")
             print("#"*self.width, end="")
