@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Defines a rectangle class."""
+"""This module creates a class definition."""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Represent a rectangle."""
+    """Defines a Rectangle class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         '''Defines instance attributes'''
