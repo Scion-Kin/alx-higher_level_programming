@@ -1,0 +1,2 @@
+USE ?;
+SHOW TABLES;
