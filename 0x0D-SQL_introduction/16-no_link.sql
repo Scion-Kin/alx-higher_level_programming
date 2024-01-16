@@ -1,2 +1,2 @@
 -- lists records with a name
-SELECT * FROM `second_table` WHERE `name` IS NOT NULL ORDER BY `score` DESC
+SELECT `score`, `name` FROM `second_table` WHERE `name` IS NOT "" ORDER BY `score` DESC
