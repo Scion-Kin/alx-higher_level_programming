@@ -1,3 +1,3 @@
 -- lists all cities in a table
 SELECT cities.id, cities.name, states.name FROM cities
-WHERE cities.state_id = states.id ORDER BY cities.id;
+LEFT JOIN states ON states.id = cities.state_id ORDER BY cities.id;
