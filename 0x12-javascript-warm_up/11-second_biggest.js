@@ -7,7 +7,7 @@ if (isNaN(process.argv[2]) || !process.argv[2] || process.argv.length < 4) {
   const arr = [];
 
   while (process.argv[i]) {
-    arr.push(Number(process.argv[i]));
+    arr.push(parseInt(process.argv[i]));
     i++;
   }
   console.log(Math.max(...arr));
