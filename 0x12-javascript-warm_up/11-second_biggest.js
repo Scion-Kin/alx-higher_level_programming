@@ -10,5 +10,6 @@ if (isNaN(process.argv[2]) || !process.argv[2] || process.argv.length < 4) {
     arr.push(parseInt(process.argv[i]));
     i++;
   }
-  console.log(Math.max(...arr));
+  arr.sort((a, b) => b - a);
+  console.log(arr[1]);
 }
