@@ -15,7 +15,10 @@ if __name__ == "__main__" and len(sys.argv) == 5:
 
     states = session.query(State).filter(State.name == (sys.argv[4])).first()
 
-    if (states):
+    if (states) and isinstance(states, list):
+        for state in states:
+            print("{}: {}".format(states.id, states.name))
+    elif states is not None:
         print("{}: {}".format(states.id, states.name))
     else:
         print('Not found')
