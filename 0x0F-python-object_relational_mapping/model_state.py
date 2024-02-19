@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''This module defines a class named states for SQLAlchemy'''
+'''This module defines a class named State for SQLAlchemy'''
 from sqlalchemy import Integer, String, Column
 from sqlalchemy.ext.declarative import declarative_base
 
