@@ -13,12 +13,9 @@ if __name__ == "__main__" and len(sys.argv) == 5:
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter(State.name == (sys.argv[4])).all()
+    states = session.query(State).filter(State.name == (sys.argv[4])).first()
 
-    if states is not None and isinstance(states, list):
-        for state in states:
-            print("{}: {}".format(state.id, state.name))
-    elif states is not None:
+    if states is not None:
         print("{}: {}".format(states.id, states.name))
     else:
         print('Not found')
