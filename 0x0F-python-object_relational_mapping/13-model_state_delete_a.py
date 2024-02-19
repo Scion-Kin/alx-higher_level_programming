@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' Changes a state name in the database '''
+''' Deletes states in the database containing the letter a '''
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)
@@ -12,8 +12,9 @@ if __name__ == "__main__" and len(sys.argv) == 4:
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    change = session.query(State).filter_by(id=2).first()
+    to_delete = session.query(State).filter(State.name.like('%a%')).all()
 
-    change.name = 'New Mexico'
+    for state in to_delete:
+        session.delete(state)
 
     session.commit()
