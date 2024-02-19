@@ -19,7 +19,5 @@ if __name__ == "__main__" and len(sys.argv) == 4:
     if (states):
         for state in states:
             print("{}: {}".format(state.id, state.name))
-    else:
-        print('Nothing')
 
     session.close()
