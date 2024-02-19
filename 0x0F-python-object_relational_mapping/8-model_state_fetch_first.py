@@ -15,6 +15,7 @@ if __name__ == "__main__" and len(sys.argv) == 4:
 
     states = session.query(State).order_by(State.id).first()
 
-    print("{}: {}".format(states.id, states.name))
+    if (states):
+        print("{}: {}".format(states.id, states.name))
 
     session.close()
