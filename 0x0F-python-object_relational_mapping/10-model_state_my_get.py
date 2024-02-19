@@ -14,10 +14,10 @@ if __name__ == "__main__" and len(sys.argv) == 5:
     session = Session()
 
     states = session.query(State).filter(State.name == (sys.argv[4]))\
-        .order_by(State.id).first()
+        .first()
 
     if states is not None:
-        print("{}: {}".format(states.id, states.name))
+        print("{}".format(states.id))
     else:
         print('Not found')
 
