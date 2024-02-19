@@ -11,8 +11,9 @@ if __name__ == "__main__" and len(sys.argv) == 4:
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = State(name='Louisiana')
-    session.add(state)
-    new = session.query(State).filter_by(name='Louisiana').first()
-    print(new.id)
+
+    change = session.query(State).filter_by(id=2).first()
+
+    change.name = 'New Mexico'
+
     session.commit()
