@@ -13,11 +13,11 @@ if __name__ == "__main__" and len(sys.argv) == 5:
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter(State.name==(sys.argv[4])).order_by(State.id).first()
+    states = session.query(State).filter(State.name==(sys.argv[4])).first()
 
     if (states):
         print("{}: {}".format(states.id, states.name))
     else:
-        print('Nothing')
+        print('Not found')
 
     session.close()
