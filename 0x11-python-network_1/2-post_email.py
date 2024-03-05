@@ -17,4 +17,5 @@ if __name__ == '__main__':
     req = Request(site, data)
 
     with urlopen(req) as response:
+        response = response.read()
         print(response.decode('utf-8'))
