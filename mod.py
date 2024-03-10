@@ -31,7 +31,7 @@ if __name__ == "__main__":
 
         try:
             with open(sys.argv[i], mode="w", encoding="UTF-8") as myFile:
-                myFile.write("#!/usr/bin/node\n")
+                myFile.write("#!/usr/bin/python3")
 
         except Exception:
             help(mod)
