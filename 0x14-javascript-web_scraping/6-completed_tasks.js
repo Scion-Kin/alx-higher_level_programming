@@ -19,6 +19,6 @@ request.get(url, function (error, response, body) {
       }
       dict[i] = count;
     }
-    console.log(dict);
+    console.log(JSON.stringify(dict));
   }
 });
