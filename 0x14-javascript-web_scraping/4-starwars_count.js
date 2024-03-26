@@ -2,7 +2,7 @@
 
 const request = require('request');
 
-request.get(process.argv[2], function (error, response, body) {
+request(process.argv[2], function (error, response, body) {
   if (!error) {
     const resJson = JSON.parse(body);
     let count = 0;
