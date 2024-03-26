@@ -4,8 +4,9 @@ const request = require('request');
 
 const url = 'https://jsonplaceholder.typicode.com/todos';
 request.get(url, function (error, response, body) {
-  if (error) console.log(error);
-  else {
+  if (error) {
+    console.log(error);
+  } else {
     const resJson = JSON.parse(body);
 
     const users = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -19,6 +20,6 @@ request.get(url, function (error, response, body) {
       }
       dict[i] = count;
     }
-    console.log(JSON.stringify(dict, null, 2));
+    console.log(dict);
   }
 });
