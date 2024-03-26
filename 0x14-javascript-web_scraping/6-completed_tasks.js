@@ -20,6 +20,11 @@ request(url, function (error, response, body) {
       }
       dict[i] = count;
     }
+    for (const i in dict) {
+        if (dict[i] === 0) {
+            delete dict[i];
+        }
+    }
     console.log(dict);
   }
 });
