@@ -2,8 +2,7 @@
 
 const request = require('request');
 
-const films = 'https://swapi-api.alx-tools.com/api/films/';
-request.get(films, function (error, response, body) {
+request.get('https://swapi-api.alx-tools.com/api/films/', function (error, response, body) {
   if (error) {
     console.log(error);
   }
