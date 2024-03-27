@@ -2,7 +2,7 @@
 
 const request = require('request');
 
-if (process.argv[2]) {
+if (process.argv[2] != undefined) {
   request(process.argv[2], function (error, response, body) {
     if (error) {
       console.error(error);
