@@ -5,9 +5,7 @@ const request = require('request');
 request(process.argv[2], function (error, response, body) {
   if (error) {
     console.error(error);
-  }
-
-  else {
+  } else {
     const resJson = JSON.parse(body);
     let count = 0;
     for (const i of resJson.results) {
